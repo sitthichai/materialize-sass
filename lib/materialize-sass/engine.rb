@@ -6,10 +6,10 @@ module Materialize
           app.config.assets.paths << root.join('app/assets', sub).to_s
         end
 
-        unless Sprockets::Rails::VERSION.starts_with?('3')
+        #unless Sprockets::Rails::VERSION.starts_with?('3')
           app.config.assets.precompile << %r(material-design-icons/Material-Design-Icons\.(?:eot|svg|ttf|woff|woff2?)$)
           app.config.assets.precompile << %r(roboto/Roboto-[\w-]+\.(?:eot|svg|ttf|woff|woff2?)$)
-        end
+        #end
       end
     end
   end
